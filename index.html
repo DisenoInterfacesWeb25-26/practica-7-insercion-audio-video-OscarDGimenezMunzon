@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Práctica 6 - Bootstrap</title>
+</head>
+
+<body>
+    <!--BARRA NAVEGACIÓN-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+            <a class="navbar-brand" href="#">
+                <img src="./images/ENIUN@2x.png" alt="Logo" width="50%" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" aria-disabled="true" href="#" data-bs-toggle="dropdown" role="button">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SEO</a></li>
+                            <li><a class="dropdown-item" href="#">Desarrollo web</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing online</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./tabla.html">Tabla</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar" />
+                    <button class="btn btn-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+    <!--CARROUSEL DE IMÁGENES-->
+    <div class="container-fluid bg-body-secondary mb-5">
+        <div id="carousel" class="carousel slide carousel-fade w-100">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/ENIUNCreatividadDiseno.png" class="d-block w-100" alt="ENIUNCreatividadDiseno">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/ENIUNCreatividadSocialNetwork.png" class="d-block w-100"
+                        alt="ENIUNCreatividadSocialNetwork">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/ENIUNCreatividadSeo.png" class="d-block w-100" alt="ENIUNCreatividadSeo">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="row px-md-5">
+            <div class="col m-4 p-4">
+                <h1 class="fw-light">Hello, world!</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro minus voluptas ut culpa corporis
+                    at
+                    error quod optio a? Suscipit, fugiat? Sapiente unde architecto aut reprehenderit deleniti, neque
+                    suscipit commodi!</p>
+                <hr>
+                <p class="fw-semibold">Voluptatibus sit perspiciatis reprehenderit quod debitis non! Quas deleniti alias error explicabo
+                    officiis nostrum! Dolorum, modi.</p>
+                <button class="btn btn-success">Learn more</button>
+            </div>
+        </div>
+    </div>
+
+    <!--ARTÍCULOS-->
+    <div class="container">
+        <h2 class="text-center m-3">ARTÍCULOS</h2>
+    </div>
+    <div class="container-md px-md-5 d-flex justify-content-center">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-3 mb-4">
+            <div class="col">
+                <div class="card">
+                    <img src="./images/imagen_articulo_1.png" class="card-img-top" alt="img articulo 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Título tarjeta</h5>
+                        <p class="card-text">Soluta ad earum error assumenda nam hic dolorum dolores quam quos
+                            exercitationem consequatur nemo velit.</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./images/imagen_articulo_2.png" class="card-img-top" alt="img articulo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Título tarjeta</h5>
+                        <p class="card-text">Soluta ad earum error assumenda nam hic dolorum dolores quam quos
+                            exercitationem consequatur nemo velit.</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="./images/imagen_articulo_3.png" class="card-img-top" alt="img articulo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Título tarjeta</h5>
+                        <p class="card-text">Soluta ad earum error assumenda nam hic dolorum dolores quam quos
+                            exercitationem consequatur nemo velit.</p>
+                        <a href="#" class="btn btn-primary">More info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="footer p-5 mb-4 d-flex justify-content-between">
+                    <a class="text-white link-underline link-underline-opacity-0" href="#">Enuin.com</a>
+                    <a class="text-white-50 link-underline link-underline-opacity-0" href="#">Política de privacidad y
+                        cookies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.btn, .footer{
+    background-color: #18a2b7;
+}
+
+.btn:hover{
+    background-color: #127b8c;
+}
