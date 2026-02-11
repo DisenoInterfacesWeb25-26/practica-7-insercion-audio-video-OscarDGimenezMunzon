@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Práctica 6 - Bootstrap</title>
+</head>
+
+<body>
+    <!--ACTIVIDAD: Control de Audio y Video con Javascript-->
+    <video id="medio" width="720" height="400">
+        <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4">
+    </video>
+
+
+    <nav>
+        <input type="button" id="reiniciar" value="reiniciar">
+        <input type="button" id="retrasar" value="&laquo;">
+        <input type="button" id="play" value="&#9658;">
+        <input type="button" id="adelantar" value="&raquo;">
+        <input type="button" id="silenciar" value="silenciar">
+        <label>Volumen</label>
+        <input type="button" id="menosVolumen" value="-">
+        <input type="button" id="masVolumen" value="+">
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function accionPlay() {
+            if (!medio.paused && !medio.ended) {
+                medio.pause();
+                play.value = '\u25BA'; //\u25BA
+                document.body.style.backgroundColor = '#fff';
+            }
+            else {
+                medio.play();
+                play.value = '||';
+                document.body.style.backgroundColor = 'grey';
+            }
+        }
+        function accionReiniciar() {
+            //Usar propiedad .currentTime
+            //Reproducir el vídeo
+            //Cambiar el valor del botón a ||
+        }
+        function accionRetrasar() {
+            //Usar propiedad .curentTime
+            //Contemplar que no existen valores negativos
+        }
+        function accionAdelantar() {
+            //Contemplar que no existen valores mayores a medio.duration	
+        }
+        function accionSilenciar() {
+            //Utilizar medio.muted = true; o medio.muted = false;
+        }
+        function accionMasVolumen() {
+            //Contemplar que el valor máximo de volumen es 1
+        }
+        function accionMenosVolumen() {
+            //Contemplar que el valor mínimo de volumen es 0
+        }
+
+        function iniciar() {
+
+            medio = document.getElementById('medio');
+            play = document.getElementById('play');
+            reiniciar = document.getElementById('reiniciar');
+            retrasar = document.getElementById('retrasar');
+            adelantar = document.getElementById('adelantar');
+            silenciar = document.getElementById('silenciar');
+
+            play.addEventListener('click', accionPlay);
+            reiniciar.addEventListener('click', accionReiniciar);
+            retrasar.addEventListener('click', accionRetrasar);
+            adelantar.addEventListener('click', accionAdelantar);
+            silenciar.addEventListener('click', accionSilenciar);
+            menosVolumen.addEventListener('click', accionMenosVolumen);
+            masVolumen.addEventListener('click', accionMasVolumen);
+        }
+
+        window.addEventListener('load', iniciar, false);
+    </script>
+</body>
+
+</html>
