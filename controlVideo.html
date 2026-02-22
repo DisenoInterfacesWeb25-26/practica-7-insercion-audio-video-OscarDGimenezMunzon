@@ -11,26 +11,85 @@
 </head>
 
 <body>
+    <!--BARRA NAVEGACIÓN-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+            <a class="navbar-brand" href="#">
+                <img src="./images/ENIUN@2x.png" alt="Logo" width="50%" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" aria-disabled="true" href="#" data-bs-toggle="dropdown"
+                            role="button">Servicios</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">SEO</a></li>
+                            <li><a class="dropdown-item" href="#">Desarrollo web</a></li>
+                            <li><a class="dropdown-item" href="#">Marketing online</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./tabla.html">Tabla</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./controlVideo.html">Control de vídeo</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar" />
+                    <button class="btn btn-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
     <!--ACTIVIDAD: Control de Audio y Video con Javascript-->
-    <video id="medio" width="720" height="400">
-        <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4">
-    </video>
+    <div class="container-fluid mt-5 text-center">
+        <video id="medio" width="720" height="400">
+            <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4">
+        </video>
 
 
-    <nav>
-        <input type="button" id="reiniciar" value="reiniciar">
-        <input type="button" id="retrasar" value="&laquo;">
-        <input type="button" id="play" value="&#9658;">
-        <input type="button" id="adelantar" value="&raquo;">
-        <input type="button" id="silenciar" value="silenciar">
-        <label>Volumen</label>
-        <input type="button" id="menosVolumen" value="-">
-        <input type="button" id="masVolumen" value="+">
-    </nav>
+        <nav>
+            <input type="button" id="reiniciar" value="Reiniciar">
+            <input type="button" id="retrasar" value="&laquo;">
+            <input type="button" id="play" value="&#9658;">
+            <input type="button" id="adelantar" value="&raquo;">
+            <input type="button" id="silenciar" value="Silenciar">
+            <label>Volumen</label>
+            <input type="button" id="menosVolumen" value="-">
+            <input type="button" id="masVolumen" value="+">
+        </nav>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <!--Footer-->
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="footer p-5 mb-4 d-flex justify-content-between">
+                    <a class="text-white link-underline link-underline-opacity-0" href="#">Enuin.com</a>
+                    <a class="text-white-50 link-underline link-underline-opacity-0" href="#">Política de privacidad y
+                        cookies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SCRIPTS-->
 
     <script>
         function accionPlay() {
@@ -47,8 +106,13 @@
         }
         function accionReiniciar() {
             //Usar propiedad .currentTime
+            medio.currentTime = 0;
+            
             //Reproducir el vídeo
+            medio.play();
+
             //Cambiar el valor del botón a ||
+            play.value = '||';
         }
         function accionRetrasar() {
             //Usar propiedad .curentTime
@@ -87,6 +151,10 @@
 
         window.addEventListener('load', iniciar, false);
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
