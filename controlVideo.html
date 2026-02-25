@@ -146,10 +146,21 @@
         }
         function accionMasVolumen() {
             //Contemplar que el valor máximo de volumen es 1
-
+            if(medio.volume <= 0.8){
+                medio.volume += 0.1;
+            } else {
+                medio.volume = 1;
+            }
+            console.log(medio.volume);
         }
         function accionMenosVolumen() {
             //Contemplar que el valor mínimo de volumen es 0
+            if(medio.volume >= 0.2){
+                medio.volume -= 0.1;
+            } else {
+                medio.volume = 0;
+            }
+            console.log(medio.volume);
         }
 
         function iniciar() {
